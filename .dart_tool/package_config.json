@@ -158,6 +158,12 @@
       "languageVersion": "3.1"
     },
     {
+      "name": "logger",
+      "rootUri": "file:///C:/Users/model/AppData/Local/Pub/Cache/hosted/pub.dev/logger-1.4.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "matcher",
       "rootUri": "file:///C:/Users/model/AppData/Local/Pub/Cache/hosted/pub.dev/matcher-0.12.16+1",
       "packageUri": "lib/",
@@ -260,7 +266,7 @@
       "languageVersion": "3.5"
     }
   ],
-  "generated": "2024-09-19T08:27:59.054934Z",
+  "generated": "2024-09-19T10:54:12.963834Z",
   "generator": "pub",
   "generatorVersion": "3.5.3",
   "flutterRoot": "file:///D:/AndroidFlutter/Flutter/flutter",
