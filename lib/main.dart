@@ -33,14 +33,15 @@ class MainApp extends StatelessWidget {
         ),
         useMaterial3: true,
         textTheme: const TextTheme(
-          titleMedium: TextStyle(fontSize: 24, fontWeight: FontWeight.bold), // ขนาดตัวหนังสือใหญ่ขึ้น
-          bodyMedium: TextStyle(fontSize: 18), // ขนาดตัวหนังสือใหญ่ขึ้น
-          bodySmall: TextStyle(fontSize: 16),
+          titleMedium: TextStyle(
+              fontSize: 24, fontWeight: FontWeight.bold, color: Colors.black), // สีของหัวข้อ
+          bodyMedium: TextStyle(fontSize: 18, color: Colors.black), // สีของตัวหนังสือหลัก
+          bodySmall: TextStyle(fontSize: 16, color: Colors.black), // สีของตัวหนังสือขนาดเล็ก
         ),
         inputDecorationTheme: const InputDecorationTheme(
           border: OutlineInputBorder(),
           contentPadding: EdgeInsets.symmetric(vertical: 10, horizontal: 15),
-          labelStyle: TextStyle(fontSize: 16),
+          labelStyle: TextStyle(fontSize: 16, color: Colors.black), // สีของข้อความใน TextField
         ),
       ),
       home: const TodaApp(),
@@ -176,13 +177,14 @@ class _TodaAppState extends State<TodaApp> {
       appBar: AppBar(
         title: const Text(
           "รายการ",
-          style: TextStyle(fontSize: 24), // ขนาดตัวหนังสือใหญ่ขึ้นใน AppBar
+          style: TextStyle(fontSize: 24, color: Colors.black), // สีของหัวข้อ AppBar
         ),
         backgroundColor: Theme.of(context).colorScheme.primary,
-        titleTextStyle: TextStyle(color: Theme.of(context).colorScheme.onPrimary), // สีของตัวหนังสือใน AppBar
+        titleTextStyle: TextStyle(
+            color: Theme.of(context).colorScheme.onPrimary), // สีของตัวหนังสือใน AppBar
       ),
       body: _myList.isEmpty
-          ? const Center(child: Text('ยังไม่มีรายการ'))
+          ? const Center(child: Text('ยังไม่มีรายการ', style: TextStyle(color: Colors.black))) // สีดำ
           : ListView.builder(
               itemCount: _myList.length,
               itemBuilder: (context, index) {
@@ -205,7 +207,7 @@ class _TodaAppState extends State<TodaApp> {
                     title: Text(
                       _myList[index]['หัวข้อ']!,
                       style: const TextStyle(
-                        fontSize: 22, // ขนาดตัวหนังสือใหญ่ขึ้นใน ListTile
+                        fontSize: 22,
                         fontWeight: FontWeight.bold,
                         color: Colors.white, // สีของตัวหนังสือใน ListTile
                       ),
@@ -213,22 +215,22 @@ class _TodaAppState extends State<TodaApp> {
                     subtitle: Text(
                       _myList[index]['รายละเอียด']!,
                       style: const TextStyle(
-                        fontSize: 18, // ขนาดตัวหนังสือใหญ่ขึ้นในข้อความย่อยของ ListTile
+                        fontSize: 18,
                         color: Colors.white,
                       ),
                     ),
-                    tileColor: Colors.teal, // สีพื้นหลังของ ListTile
+                    tileColor: Colors.teal,
                     trailing: Row(
                       mainAxisSize: MainAxisSize.min,
                       children: [
                         IconButton(
-                          icon: const Icon(Icons.edit, color: Colors.white), // สีของไอคอนแก้ไข
+                          icon: const Icon(Icons.edit, color: Colors.white),
                           onPressed: () {
                             editTodoHandle(context, index);
                           },
                         ),
                         IconButton(
-                          icon: const Icon(Icons.delete, color: Colors.white), // สีของไอคอนลบ
+                          icon: const Icon(Icons.delete, color: Colors.white),
                           onPressed: () {
                             deleteTodoHandle(index);
                           },
@@ -243,8 +245,8 @@ class _TodaAppState extends State<TodaApp> {
         onPressed: () {
           addTodoHandle(context);
         },
-        backgroundColor: Theme.of(context).colorScheme.primary, // สีพื้นหลังของปุ่มบวก
-        child: const Icon(Icons.add, color: Colors.white), // สีของไอคอนปุ่มบวก
+        backgroundColor: Colors.white, // สีพื้นหลังของปุ่มบวก
+        child: const Icon(Icons.add, color: Colors.teal), // สีของไอคอนปุ่มบวก
       ),
     );
   }
