@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "741088714435",
-    "project_id": "lab4-2220e",
-    "storage_bucket": "lab4-2220e.appspot.com"
+    "project_number": "1084462734057",
+    "project_id": "todo-list-4a107",
+    "storage_bucket": "todo-list-4a107.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:741088714435:android:044f5db7352436b06e8c76",
+        "mobilesdk_app_id": "1:1084462734057:android:19df64ce3dbb7cd55c2e78",
         "android_client_info": {
-          "package_name": "com.example.lab4_list"
+          "package_name": "com.example.lab4_todo"
         }
       },
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyD768kqvirLCo0cSb3qHSg5s9flqFO02GY"
+          "current_key": "AIzaSyAun1mP1lhp2cWFI2xJ2pSKK9XfxuShp9k"
         }
       ],
       "services": {

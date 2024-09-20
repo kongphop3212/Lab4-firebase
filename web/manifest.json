@@ -1,6 +1,6 @@
 {
-    "name": "lab4_list",
-    "short_name": "lab4_list",
+    "name": "lab4_todo",
+    "short_name": "lab4_todo",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
